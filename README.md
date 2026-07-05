@@ -1,10 +1,12 @@
 # TodoListApp
-To use Angular Material components added in the project you must install Angular Material and Angular CDK:
 
-In the Web/todolistapp.client folder run:
+### Angular 22.0.5 is used in this project 
 
-npm install @angular/material @angular/cdk @angular/animations --save
+* as the requirement is to use latest Angular version. 
+* This version shows some vulnerabilities and asking downgrade to 21.2.18.
 
-After install the TypeScript errors will disappear. You should also ensure BrowserAnimationsModule is imported (already added in AppModule).
+### Angular material
 
-This file is a helper README noting the manual npm step required.
+* if angular material is not installed with npm install, you will get TypeScript errors in the project.
+* In the Web/todolistapp.client folder run:
+	npm install @angular/material @angular/cdk @angular/animations --save
