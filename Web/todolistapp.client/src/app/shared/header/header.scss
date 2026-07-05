@@ -1,0 +1,26 @@
+.app-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px 16px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+
+.title-link {
+  text-decoration: none;
+  color: inherit;
+}

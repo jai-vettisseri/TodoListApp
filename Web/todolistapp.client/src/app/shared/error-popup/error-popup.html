@@ -1,0 +1,9 @@
+<div class="error-overlay" *ngIf="message">
+  <div class="error-dialog">
+    <div class="error-header">Error</div>
+    <div class="error-body">{{ message }}</div>
+    <div class="error-actions">
+      <button class="btn" (click)="close()">Close</button>
+    </div>
+  </div>
+</div>

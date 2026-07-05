@@ -26,3 +26,18 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#.net core specific
+
+bin/
+obj/
+out/
+publish/
+*.log
+
+Visual Studio Code specific
+.vs/
+.vscode/
+*.user
+*.suo
+*.cache

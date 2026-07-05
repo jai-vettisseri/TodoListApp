@@ -1,0 +1,50 @@
+<div class="todo-page">
+  <h2>{{ id && id !== 'new' ? 'Edit Todo' : 'Create Todo' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+      <mat-hint align="end">{{ form.get('title')?.value?.length || 0 }}/60</mat-hint>
+      <mat-error *ngIf="form.get('title')?.touched && form.get('title')?.hasError('required')">Title is required</mat-error>
+      <mat-error *ngIf="form.get('title')?.touched && form.get('title')?.hasError('maxlength')">Title cannot exceed 60 characters</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+
+    <div class="form-row form-row-inline">
+      <div class="col">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Due date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dueDate" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="form.get('dueDate')?.hasError('required')">Due date is required</mat-error>
+          <mat-error *ngIf="form.get('dueDate')?.hasError('pastDate')">Due date cannot be in the past</mat-error>
+          <mat-error *ngIf="form.get('dueDate')?.hasError('invalidDate')">Invalid due date</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="col">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status">
+            <mat-option value="Pending">Pending</mat-option>
+            <mat-option value="In-Progress">In-Progress</mat-option>
+            <mat-option value="Done">Done</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn" [disabled]="loading">Save</button>
+      <button type="button" class="btn" (click)="cancel()" [disabled]="loading">Cancel</button>
+    </div>
+
+    <div *ngIf="error" class="error">{{ error }}</div>
+  </form>
+</div>

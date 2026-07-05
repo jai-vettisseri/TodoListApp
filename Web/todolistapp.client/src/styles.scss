@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+$primary-color: #1976d2;
+$error-color: #d9534f;
+$primary-font-color: #fff;
+
+.logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.logo-text {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  background: #1976d2;
+  color: white;
+  border-radius: 6px;
+}
+
+.btn {
+  padding: 6px 10px;
+  cursor: pointer;
+  background: $primary-color;
+  color: $primary-font-color;
+  border: none;
+  border-radius: 6px;
+}
+
+.count {
+  background: $primary-color;
+  color: $primary-font-color;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  max-height:17px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+  .icon-btn.danger {
+    color: $error-color;
+  }
+
+.mat-mdc-header-cell {
+  background: $primary-color !important;
+  color: $primary-font-color;
+}
+
+.invalid {
+  color: $error-color;
+  font-size: 0.9rem;
+}
+
+.error {
+  color: $error-color;
+  margin-top: 8px;
+}
+
+.required {
+  color: $error-color;
+  margin-left: 4px;
+}
+
+.form-row {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+  .form-row label {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .form-row input, .form-row textarea, .form-row select {
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+.form-row-inline {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+  .form-row-inline .col {
+    flex: 1;
+    min-width: 200px;
+  }
+
+
+@media (min-width: 700px) {
+  .form-row.form-row-inline {
+    flex-direction: row;
+  }
+
+    .form-row.form-row-inline .col {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+
+

@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/Application.UnitTests/Application.UnitTests.csproj" Id="fe2551e8-218a-4f90-ae25-9321dec7cd3b" />
+    <Project Path="Tests/Domain.UnitTests/Domain.UnitTests.csproj" Id="841cfbc7-c876-4354-9877-53fa525f1c9e" />
+  </Folder>
+  <Folder Name="/Web/">
+    <Project Path="Web/todolistapp.client/todolistapp.client.esproj">
+      <Build />
+      <Deploy />
+    </Project>
+    <Project Path="Web/ToDoListApp.Server/ToDoListApp.Server.csproj" />
+  </Folder>
+  <Project Path="Application/Application.csproj" Id="c4d2ee2b-3e83-4265-bb1f-95f73973c549" />
+  <Project Path="Domain/Domain.csproj" Id="79ee1f97-699c-4b4b-8db8-1e90fffaa11a" />
+  <Project Path="Infrastructure/Infrastructure.csproj" Id="23554e02-16e5-4720-8870-1d343601b8b3" />
+</Solution>

@@ -1,0 +1,28 @@
+:host {
+    max-width: 1280px;
+    padding: 2rem;
+    text-align: center;
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+table {
+    margin: 0 auto;
+}
+.app-shell {
+  display: flex;
+  min-height: calc(100vh - 64px);
+}
+
+.left {
+  width: 240px;
+  border-right: 1px solid #eaeaea;
+}
+
+.content {
+  flex: 1;
+  padding: 16px;
+}
