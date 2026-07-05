@@ -22,6 +22,9 @@ namespace TodoListApp.Server
             builder.Services.AddControllers();
             builder.Services.AddOpenApi();
 
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
             return builder;
         }
     }
